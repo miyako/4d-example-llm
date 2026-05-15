@@ -23,6 +23,7 @@ $event.onTerminate:=Formula:C1597(LOG EVENT:C667(Into 4D debug message:K38:5; ([
 $homeFolder:=Folder:C1567(fk home folder:K87:24).folder(".GGUF")
 var $max_position_embeddings; $batch_size; $parallel : Integer
 var $ubatch_size; $n_gpu_layers; $threads; $threads_batch; $batches : Integer
+var $ctx_size; $temp; $min_p; $top_k; $top_p; $repeat_penalty; $presence_penalty : Integer
 
 var $folder : 4D:C1709.Folder
 var $logFile : 4D:C1709.File
@@ -86,7 +87,7 @@ If (Not:C34($logFile.exists))
 	$logFile.setContent(4D:C1709.Blob.new())
 End if 
 
-$port:=8080  //インスタンス毎にllama.cppのポートを割り当てること
+$port:=8082  //インスタンス毎にllama.cppのポートを割り当てること
 $options:={\
 embeddings: True:C214; \
 pooling: $pooling; \
@@ -155,16 +156,16 @@ End if
 * これらのハイパーパラメーターについてはモデルカードを参照のこと
  */
 
-$temp:=0.6
+$temp:=0.7
 $min_p:=0
 $top_k:=20
-$top_p:=0.95
+$top_p:=0.8
 $repeat_penalty:=1
-$presence_penalty:=0
-
+$presence_penalty:=1.5
+$ctx_size:=10000
 $port:=8081  //インスタンス毎にllama.cppのポートを割り当てること
 $options:={\
-ctx_size: $max_position_embeddings*$batches; \
+ctx_size: $ctx_size; \
 batch_size: $batch_size*$batches; \
 ubatch_size: $ubatch_size; \
 parallel: $batches; \
@@ -181,6 +182,7 @@ log_file: $logFile; \
 log_disable: False:C215; \
 n_gpu_layers: $n_gpu_layers}
 
+var $chat : cs:C1710.event.huggingface
 $chat:=cs:C1710.event.huggingface.new($folder; $URL; $path)
 $huggingfaces:=cs:C1710.event.huggingfaces.new([$chat])
 $llama:=cs:C1710.llama.llama.new($port; $huggingfaces; $homeFolder; $options; $event)

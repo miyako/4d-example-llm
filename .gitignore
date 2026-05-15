@@ -1,3 +1,6 @@
 llm/Project/DerivedData/methodAttributes.json
 llm/Project/DerivedData/formAttributes.json
 llm/userPreferences.*
+llm/secrets/*
+llm/Data/*
+llm/Project/DerivedData/1/formAttributes.json

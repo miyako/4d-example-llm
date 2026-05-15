@@ -2,6 +2,20 @@
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="llm" uuid="04993A75F08B4FE9BC9D95664E0F2A81" collation_locale="en-gb">
 	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Documents" uuid="7A4C558972554812ABBB8C03F511F39A" id="1">
+		<field name="ID" uuid="F4CDCCAAB32346ABBD481A41F5E1477B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Embeddings" uuid="FF5AE0E44C4646FFBE5F01160A53866B" type="21" blob_switch_size="2147483647" id="2">
+			<field_extra class_id="4D.Vector"/>
+		</field>
+		<field name="Text" uuid="1311A5A768E941DD8A4496DCEAE8D0E3" type="10" id="3"/>
+		<field name="Path" uuid="949DF9A86C314E98B4E23D0358513E7A" type="10" id="4"/>
+		<primary_key field_name="ID" field_uuid="F4CDCCAAB32346ABBD481A41F5E1477B"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="B2F1E6B467884272A11A64C569947299" type="1">
+		<field_ref uuid="F4CDCCAAB32346ABBD481A41F5E1477B" name="ID">
+			<table_ref uuid="7A4C558972554812ABBB8C03F511F39A" name="Documents"/>
+		</field_ref>
+	</index>
 	<base_extra>
 		<journal_file journal_file_enabled="true"/>
 	</base_extra>
