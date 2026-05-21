@@ -62,7 +62,7 @@ $URL:="keisuke-miyako/embeddinggemma-300m-gguf-q8_0"
 - threads_httpには+1の余裕を持たせると良い（healthエンドポイントのため）
 - ctx_sizeにはプロンプト全体が収まらなければならない
 - threadsはデコーダー（出力）
-- threads_batchはデコーダー（入力）
+- threads_batchはエンコーダー（入力）
 - threads,threads_batchはCPUのコア数（GPUではない）
 
 埋め込みモデル特有の注意点
