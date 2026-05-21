@@ -1,5 +1,48 @@
-{COUNT}件のデータを生成してください。
+Analyze the following exchange rate data and invoice details, then return your recommendation.
 
-ジャンルは{GENRE}とします。
+## Invoice Details
+- Invoice Amount (JPY Equivalent): ¥12,500,000
+- Settlement Term: Net 60
+- Trade Type: Export — machinery components to a buyer in Germany
+- Invoiceable Currencies: USD, EUR, CNY, GBP, AUD, SGD
 
-{OTHER}
+## Spot Rates (JPY per 1 unit of foreign currency)
+| Currency | Spot Rate (JPY) | Timestamp            |
+|----------|-----------------|----------------------|
+| USD      | 157.4200        | 2025-09-15T08:30:00Z |
+| EUR      | 173.8500        | 2025-09-15T08:30:00Z |
+| CNY      | 21.6300         | 2025-09-15T08:30:00Z |
+| GBP      | 201.4700        | 2025-09-15T08:30:00Z |
+| AUD      | 103.2100        | 2025-09-15T08:30:00Z |
+| SGD      | 118.9400        | 2025-09-15T08:30:00Z |
+
+## Cross-Rates (provided for triangular arbitrage detection)
+| Pair    | Rate   |
+|---------|--------|
+| EUR/USD | 1.1032 |
+| GBP/USD | 1.2796 |
+| AUD/USD | 0.6556 |
+| USD/CNY | 7.2730 |
+| USD/SGD | 1.3234 |
+
+## Forward Rates — 60-Day (JPY per 1 unit)
+| Currency | Forward Rate (JPY) |
+|----------|--------------------|
+| USD      | 156.8800           |
+| EUR      | 173.1200           |
+| GBP      | 200.9100           |
+| AUD      | 102.7400           |
+| SGD      | 118.5500           |
+| CNY      | 21.5900            |
+
+## Conversion Fees (charged by our bank per currency settlement)
+| Currency | Fee Rate |
+|----------|----------|
+| USD      | 0.0020   |
+| EUR      | 0.0025   |
+| CNY      | 0.0080   |
+| GBP      | 0.0030   |
+| AUD      | 0.0035   |
+| SGD      | 0.0025   |
+
+回答は日本語でお願いします！
