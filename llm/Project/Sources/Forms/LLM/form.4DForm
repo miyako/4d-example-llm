@@ -1,0 +1,372 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"events": [
+		"onLoad",
+		"onUnload"
+	],
+	"windowTitle": "",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"text": "Tab control",
+					"top": 10,
+					"left": 10,
+					"width": 940,
+					"height": 460,
+					"right": 950,
+					"labels": [
+						"Demo",
+						"Settings"
+					],
+					"action": "gotoPage"
+				}
+			}
+		},
+		{
+			"objects": {
+				"ChatResult": {
+					"type": "input",
+					"left": 14,
+					"top": 210,
+					"width": 450,
+					"height": 241,
+					"dataSourceTypeHint": "text",
+					"dataSource": "Form:C1466.ChatResult",
+					"enterable": false,
+					"sizingY": "grow",
+					"sizingX": "fixed",
+					"focusable": true
+				},
+				"btn.DEMO": {
+					"type": "button",
+					"text": "Translate!",
+					"top": 376,
+					"left": 763,
+					"width": 161,
+					"height": 75,
+					"events": [
+						"onClick"
+					],
+					"focusable": true,
+					"visibility": "visible",
+					"method": "ObjectMethods/btn.DEMO.4dm",
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"sizingY": "move"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Chat",
+					"top": 180,
+					"left": 14,
+					"width": 163,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed",
+					"sizingX": "fixed"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Text",
+					"top": 50,
+					"left": 20,
+					"width": 103,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 131,
+					"top": 50,
+					"width": 333,
+					"height": 97,
+					"dataSource": "Form:C1466.text",
+					"enterable": true
+				},
+				"Input2": {
+					"type": "input",
+					"left": 611,
+					"top": 50,
+					"width": 313,
+					"height": 33,
+					"dataSource": "Form:C1466.vi.text",
+					"enterable": true
+				},
+				"Input3": {
+					"type": "input",
+					"left": 611,
+					"top": 130,
+					"width": 313,
+					"height": 33,
+					"dataSource": "Form:C1466.vi.text",
+					"enterable": true
+				},
+				"Input4": {
+					"type": "input",
+					"left": 611,
+					"top": 210,
+					"width": 313,
+					"height": 33,
+					"dataSource": "Form:C1466.si.text",
+					"enterable": true
+				},
+				"Input5": {
+					"type": "input",
+					"left": 611,
+					"top": 290,
+					"width": 313,
+					"height": 33,
+					"dataSource": "Form:C1466.ta.text",
+					"enterable": true
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Vietnamese",
+					"top": 50,
+					"left": 500,
+					"width": 103,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Indonesian",
+					"top": 130,
+					"left": 500,
+					"width": 103,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"Text12": {
+					"type": "text",
+					"text": "Sinhala",
+					"top": 210,
+					"left": 500,
+					"width": 103,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"Text13": {
+					"type": "text",
+					"text": "Tamil",
+					"top": 290,
+					"left": 500,
+					"width": 103,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"Input6": {
+					"type": "input",
+					"left": 611,
+					"top": 335,
+					"width": 313,
+					"height": 17,
+					"dataSource": "Form:C1466.ta.notes",
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Input7": {
+					"type": "input",
+					"left": 611,
+					"top": 255,
+					"width": 313,
+					"height": 17,
+					"dataSource": "Form:C1466.si.notes",
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 611,
+					"top": 175,
+					"width": 313,
+					"height": 17,
+					"dataSource": "Form:C1466.in.notes",
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Input9": {
+					"type": "input",
+					"left": 611,
+					"top": 95,
+					"width": 313,
+					"height": 17,
+					"dataSource": "Form:C1466.vi.notes",
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none"
+				}
+			}
+		},
+		{
+			"objects": {
+				"glossary": {
+					"type": "input",
+					"left": 20,
+					"top": 350,
+					"width": 920,
+					"height": 97,
+					"dataSourceTypeHint": "text",
+					"dataSource": "Form:C1466.glossary",
+					"enterable": false,
+					"sizingY": "grow",
+					"placeholder": "confirm=\"xác nhận\" (vi)",
+					"sizingX": "grow"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Glossary",
+					"top": 320,
+					"left": 20,
+					"width": 203,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"do_not_translate": {
+					"type": "input",
+					"left": 20,
+					"top": 290,
+					"width": 920,
+					"height": 17,
+					"dataSourceTypeHint": "text",
+					"dataSource": "Form:C1466.do_not_translate",
+					"enterable": false,
+					"sizingY": "fixed",
+					"placeholder": "4D, Qodly"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Do Not Translate",
+					"top": 260,
+					"left": 20,
+					"width": 203,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"max_length": {
+					"type": "input",
+					"left": 20,
+					"top": 150,
+					"width": 94,
+					"height": 17,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.max_length",
+					"enterable": false,
+					"sizingY": "fixed",
+					"placeholder": "50"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Max Length",
+					"top": 120,
+					"left": 20,
+					"width": 103,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"register": {
+					"type": "input",
+					"left": 220,
+					"top": 90,
+					"width": 174,
+					"height": 17,
+					"dataSourceTypeHint": "text",
+					"dataSource": "Form:C1466.register",
+					"enterable": false,
+					"sizingY": "fixed",
+					"placeholder": "formal"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Register",
+					"top": 60,
+					"left": 220,
+					"width": 203,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"content_type": {
+					"type": "input",
+					"left": 20,
+					"top": 90,
+					"width": 174,
+					"height": 17,
+					"dataSourceTypeHint": "integer",
+					"dataSource": "Form:C1466.content_type",
+					"enterable": false,
+					"sizingY": "fixed",
+					"placeholder": "user interface"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Content Type",
+					"top": 60,
+					"left": 20,
+					"width": 203,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				},
+				"context": {
+					"type": "input",
+					"left": 20,
+					"top": 210,
+					"width": 920,
+					"height": 17,
+					"dataSourceTypeHint": "text",
+					"dataSource": "Form:C1466.context",
+					"enterable": false,
+					"sizingY": "fixed",
+					"placeholder": "utton label in a payment confirmation screen"
+				},
+				"Text10": {
+					"type": "text",
+					"text": "Context",
+					"top": 180,
+					"left": 20,
+					"width": 203,
+					"height": 16,
+					"fontWeight": "bold",
+					"sizingY": "fixed"
+				}
+			}
+		}
+	],
+	"geometryStamp": 976,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"menuBar": "Barre #1",
+	"method": "method.4dm",
+	"formSizeAnchor": "Tab Control"
+}
