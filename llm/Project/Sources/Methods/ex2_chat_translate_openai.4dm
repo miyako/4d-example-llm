@@ -28,6 +28,7 @@ Else
 	
 	var $window : Integer
 	$window:=Open form window:C675("LLM")
+	SET WINDOW TITLE:C213(Split string:C1554(Current method name:C684; "_").last(); $window)
 	DIALOG:C40("LLM"; $agent; *)
 	
 End if 
