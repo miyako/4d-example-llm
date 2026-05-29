@@ -1,3 +1,8 @@
+Use (Storage:C1525)
+	Storage:C1525.embeddings:=New shared object:C1526("port"; 8181)
+	Storage:C1525.chat:=New shared object:C1526("port"; 8182)
+End use 
+
 var $llama : cs:C1710.llama.llama
 var $huggingfaces : cs:C1710.event.huggingfaces
 var $embeddings; $rerank : cs:C1710.event.huggingface
@@ -87,7 +92,7 @@ If (Not:C34($logFile.exists))
 	$logFile.setContent(4D:C1709.Blob.new())
 End if 
 
-$port:=8082  //インスタンス毎にllama.cppのポートを割り当てること
+$port:=Storage:C1525.embeddings.port  //インスタンス毎にllama.cppのポートを割り当てること
 $options:={\
 embeddings: True:C214; \
 pooling: $pooling; \
@@ -163,7 +168,7 @@ $top_p:=0.8
 $repeat_penalty:=1
 $presence_penalty:=1.5
 $ctx_size:=10000
-$port:=8081  //インスタンス毎にllama.cppのポートを割り当てること
+$port:=Storage:C1525.chat.port  //インスタンス毎にllama.cppのポートを割り当てること
 $options:={\
 ctx_size: $ctx_size; \
 batch_size: $batch_size*$batches; \

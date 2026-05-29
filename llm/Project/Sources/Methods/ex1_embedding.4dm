@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
 var $llama : cs:C1710.AIKit.OpenAI
 $llama:=cs:C1710.AIKit.OpenAI.new()
-$llama.baseURL:="http://127.0.0.1:8082/v1"
+$llama.baseURL:="http://127.0.0.1:"+String:C10(Storage:C1525.embeddings.port)+"/v1"
 
 /*
 
