@@ -10,7 +10,7 @@ Else
 	If (This:C1470=Null:C1517)
 		
 		var $agent : cs:C1710._AgentRemote
-		$agent:=cs:C1710._AgentRemote.new("Azure_xAI"; "grok-4-20-reasoning")
+		$agent:=cs:C1710._AgentRemote.new("OpenAI"; "gpt-5.5")
 		
 		var $folder : 4D:C1709.Folder
 		$folder:=Folder:C1567("/DATA/prompts")
