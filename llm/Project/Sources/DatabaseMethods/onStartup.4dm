@@ -57,7 +57,7 @@ $URL:="keisuke-miyako/embeddinggemma-300m-gguf-q8_0"
 
 注記
 
-- ubatch_sizeはbatch_sizeの倍数であるべき
+- batch_sizeはubatch_sizeの倍数であるべき
 - parallelはスロット数（単一リクエストで送信するバッチ数に合わせる）
 - threads_httpには+1の余裕を持たせると良い（healthエンドポイントのため）
 - ctx_sizeにはプロンプト全体が収まらなければならない
